@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101d32">
+  <title>Equipe e recursos | REAL LÍDER</title>
+  <link rel="icon" type="image/png" href="./assets/favicon.png">
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body data-page="team">
+  <div class="app-layout">
+    <aside class="sidebar">
+      <a class="brand brand-light" href="./dashboard.html"><span class="brand-mark">RL</span><span><strong>REAL LÍDER</strong><small>Gestão para autoescolas</small></span></a>
+      <p class="nav-caption">Administração</p>
+      <nav class="side-nav" aria-label="Navegação principal">
+        <a href="./dashboard.html">Visão geral</a><a href="./alunos.html">Alunos</a><a href="./agenda.html">Agendamentos</a><a href="./financeiro.html" data-admin-only>Financeiro</a><a href="./relatorios.html" data-admin-only>Relatórios</a><a class="active" href="./equipe.html" data-admin-only>Equipe e recursos</a>
+      </nav>
+      <div class="sidebar-footer"><strong>Autoescola Líder</strong><span>São João del-Rei · MG</span><button class="sidebar-logout" type="button" data-logout>Sair da conta</button></div>
+    </aside>
+    <main class="main-panel">
+      <header class="topbar"><div><p class="eyebrow">Acesso demonstrativo</p><h1>Equipe e recursos</h1></div><div class="topbar-actions"><button class="button button-outline" type="button" data-theme-toggle>Alternar tema</button><div class="user-chip"><span class="avatar" data-user-initials>RL</span><span><strong data-user-name>Usuário</strong><small data-user-role>Equipe</small></span></div></div></header>
+      <div class="page-content">
+        <section class="page-intro"><div><h2>Equipe cadastrada</h2><p>Perfis de demonstração disponíveis para acesso ao sistema.</p></div></section>
+        <section class="panel">
+          <div class="section-heading"><div><h2>Usuários</h2><p>Contas ilustrativas; esta versão não cria credenciais reais.</p></div></div>
+          <div class="table-wrap"><table><thead><tr><th>Nome</th><th>CPF de demonstração</th><th>Perfil</th><th>Situação</th></tr></thead><tbody id="team-table"></tbody></table></div>
+        </section>
+        <section class="panel info-panel"><h2>Recursos da autoescola</h2><p>Unidade de demonstração: Autoescola Líder · São João del-Rei, MG.</p><p>Os dados ficam armazenados no navegador usado para abrir este protótipo.</p></section>
+        <p class="demo-disclaimer">Este protótipo não autentica usuários em um servidor e não deve receber informações reais.</p>
+      </div>
+    </main>
+  </div>
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>

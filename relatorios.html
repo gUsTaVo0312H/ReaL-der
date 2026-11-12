@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101d32">
+  <title>Relatórios | REAL LÍDER</title>
+  <link rel="icon" type="image/png" href="./assets/favicon.png">
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body data-page="reports">
+  <div class="app-layout">
+    <aside class="sidebar">
+      <a class="brand brand-light" href="./dashboard.html"><span class="brand-mark">RL</span><span><strong>REAL LÍDER</strong><small>Gestão para autoescolas</small></span></a>
+      <p class="nav-caption">Administração</p>
+      <nav class="side-nav" aria-label="Navegação principal">
+        <a href="./dashboard.html">Visão geral</a><a href="./alunos.html">Alunos</a><a href="./agenda.html">Agendamentos</a><a href="./financeiro.html" data-admin-only>Financeiro</a><a class="active" href="./relatorios.html" data-admin-only>Relatórios</a><a href="./equipe.html" data-admin-only>Equipe e recursos</a>
+      </nav>
+      <div class="sidebar-footer"><strong>Autoescola Líder</strong><span>São João del-Rei · MG</span><button class="sidebar-logout" type="button" data-logout>Sair da conta</button></div>
+    </aside>
+    <main class="main-panel">
+      <header class="topbar"><div><p class="eyebrow">Indicadores da operação</p><h1>Relatórios</h1></div><div class="topbar-actions"><button class="button button-outline" type="button" data-theme-toggle>Alternar tema</button><div class="user-chip"><span class="avatar" data-user-initials>RL</span><span><strong data-user-name>Usuário</strong><small data-user-role>Equipe</small></span></div></div></header>
+      <div class="page-content">
+        <section class="page-intro"><div><h2>Resumo da operação</h2><p>Indicadores calculados a partir dos dados de demonstração cadastrados.</p></div><button class="button button-outline" type="button" data-export="report">Baixar resumo CSV</button></section>
+        <section class="stat-grid" aria-label="Indicadores gerais">
+          <article class="stat-card"><span>Total de alunos</span><strong id="report-students">0</strong><small>Todos os cadastros</small></article>
+          <article class="stat-card"><span>Aulas registradas</span><strong id="report-appointments">0</strong><small>Todos os agendamentos</small></article>
+          <article class="stat-card"><span>Alunos em andamento</span><strong id="report-active">0</strong><small>Matrículas em andamento</small></article>
+          <article class="stat-card"><span>Saldo financeiro</span><strong id="report-balance">R$ 0,00</strong><small>Receitas menos despesas</small></article>
+        </section>
+        <div class="content-grid">
+          <section class="panel"><div class="section-heading"><div><h2>Alunos por categoria</h2><p>Distribuição dos cadastros</p></div></div><div id="report-categories" class="report-list"></div></section>
+          <section class="panel"><div class="section-heading"><div><h2>Movimentação</h2><p>Resumo de receitas e despesas</p></div></div><dl class="report-totals"><div><dt>Receitas</dt><dd id="report-income">R$ 0,00</dd></div><div><dt>Despesas</dt><dd id="report-expenses">R$ 0,00</dd></div></dl></section>
+        </div>
+        <p class="demo-disclaimer">Relatórios demonstrativos. Confira os registros antes de tomar decisões financeiras.</p>
+      </div>
+    </main>
+  </div>
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>

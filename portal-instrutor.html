@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101d32">
+  <title>Portal do instrutor | REAL LÍDER</title>
+  <link rel="icon" type="image/png" href="./assets/favicon.png">
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body data-page="instructor-portal">
+  <div class="portal-layout">
+    <header class="portal-header"><a class="brand" href="./portal-instrutor.html"><span class="brand-mark">RL</span><span><strong>REAL LÍDER</strong><small>Portal do instrutor</small></span></a><div class="topbar-actions"><div class="user-chip"><span class="avatar" data-user-initials>RL</span><span><strong data-user-name>Instrutor</strong><small>Instrutor</small></span></div><button class="button button-outline" type="button" data-logout>Sair</button></div></header>
+    <main class="portal-content">
+      <section class="portal-welcome"><p class="eyebrow">Área do instrutor</p><h1>Olá, <span data-first-name>instrutor</span>!</h1><p>Consulte os horários e alunos da sua agenda.</p></section>
+      <section class="stat-grid compact-stats"><article class="stat-card"><span>Aulas na agenda</span><strong id="instructor-count">0</strong><small>Agendamentos demonstrativos</small></article><article class="stat-card"><span>Unidade</span><strong>REAL LÍDER</strong><small>São João del-Rei · MG</small></article></section>
+      <section class="panel"><div class="section-heading"><div><h2>Minha agenda</h2><p>Horários vinculados ao seu nome</p></div></div><div class="table-wrap"><table><thead><tr><th>Data e hora</th><th>Aluno</th><th>Tipo de aula</th><th>Situação</th></tr></thead><tbody id="instructor-appointments"></tbody></table></div><p id="instructor-empty" class="empty-state" hidden>Nenhuma aula vinculada ao seu perfil nesta demonstração.</p></section>
+      <p class="demo-disclaimer">As informações exibidas são de demonstração e não representam uma escala oficial.</p>
+    </main>
+  </div>
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>

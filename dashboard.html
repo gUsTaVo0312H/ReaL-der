@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101d32">
+  <title>Visão geral | REAL LÍDER</title>
+  <link rel="icon" type="image/png" href="./assets/favicon.png">
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body data-page="dashboard">
+  <div class="app-layout">
+    <aside class="sidebar">
+      <a class="brand brand-light" href="./dashboard.html"><span class="brand-mark">RL</span><span><strong>REAL LÍDER</strong><small>Gestão para autoescolas</small></span></a>
+      <p class="nav-caption">Administração</p>
+      <nav class="side-nav" aria-label="Navegação principal">
+        <a class="active" href="./dashboard.html">Visão geral</a><a href="./alunos.html">Alunos</a><a href="./agenda.html">Agendamentos</a><a href="./financeiro.html" data-admin-only>Financeiro</a><a href="./relatorios.html" data-admin-only>Relatórios</a><a href="./equipe.html" data-admin-only>Equipe e recursos</a>
+      </nav>
+      <div class="sidebar-footer"><strong>Autoescola Líder</strong><span>São João del-Rei · MG</span><button class="sidebar-logout" type="button" data-logout>Sair da conta</button></div>
+    </aside>
+    <main class="main-panel">
+      <header class="topbar"><div><p class="eyebrow">Painel de controle</p><h1>Visão geral</h1></div><div class="topbar-actions"><button class="button button-outline" type="button" data-theme-toggle>Alternar tema</button><div class="user-chip"><span class="avatar" data-user-initials>RL</span><span><strong data-user-name>Usuário</strong><small data-user-role>Equipe</small></span></div></div></header>
+      <div class="page-content">
+        <section class="welcome-row">
+          <div><p class="muted" data-today></p><h2>Olá, <span data-first-name>equipe</span>!</h2><p class="muted">Acompanhe o movimento da autoescola.</p></div>
+          <a class="button button-primary" href="./agenda.html">Novo agendamento <span aria-hidden="true">+</span></a>
+        </section>
+        <section class="stat-grid" aria-label="Indicadores">
+          <article class="stat-card"><span>Alunos cadastrados</span><strong id="stat-students">0</strong><small>Cadastros ativos</small></article>
+          <article class="stat-card"><span>Aulas agendadas</span><strong id="stat-appointments">0</strong><small>Na agenda</small></article>
+          <article class="stat-card" data-admin-only><span>Receitas registradas</span><strong id="stat-income">R$ 0,00</strong><small>Movimentação cadastrada</small></article>
+          <article class="stat-card" data-admin-only><span>Saldo financeiro</span><strong id="stat-balance">R$ 0,00</strong><small>Receitas menos despesas</small></article>
+          <article class="stat-card" data-reception-only hidden><span>Aulas realizadas</span><strong>1.284</strong><small>+8 esta semana</small></article>
+          <article class="stat-card" data-reception-only hidden><span>Atendimentos pendentes</span><strong>7</strong><small>3 retornos hoje</small></article>
+        </section>
+        <div class="content-grid">
+          <section class="panel">
+            <div class="section-heading"><div><h2>Próximas aulas</h2><p>Agendamentos cadastrados</p></div><a class="text-link" href="./agenda.html">Ver agenda →</a></div>
+            <div id="dashboard-agenda" class="table-wrap"></div>
+          </section>
+          <section class="panel">
+            <div class="section-heading"><div><h2>Acesso rápido</h2><p>Atalhos para as principais áreas</p></div></div>
+            <div class="quick-links">
+              <a href="./alunos.html"><span class="quick-icon">01</span><span><strong>Alunos</strong><small>Consulte e cadastre alunos</small></span><span aria-hidden="true">→</span></a>
+              <a href="./agenda.html"><span class="quick-icon">02</span><span><strong>Agendamentos</strong><small>Organize aulas e horários</small></span><span aria-hidden="true">→</span></a>
+              <a href="./financeiro.html" data-admin-only><span class="quick-icon">03</span><span><strong>Financeiro</strong><small>Acompanhe receitas e despesas</small></span><span aria-hidden="true">→</span></a>
+              <a href="./relatorios.html" data-admin-only><span class="quick-icon">04</span><span><strong>Relatórios</strong><small>Veja um resumo da operação</small></span><span aria-hidden="true">→</span></a>
+            </div>
+          </section>
+        </div>
+        <p class="demo-disclaimer">Dados demonstrativos salvos somente neste navegador.</p>
+      </div>
+    </main>
+  </div>
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>

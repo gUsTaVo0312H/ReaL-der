@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101d32">
+  <title>Portal do aluno | REAL LÍDER</title>
+  <link rel="icon" type="image/png" href="./assets/favicon.png">
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body data-page="student-portal">
+  <div class="portal-layout">
+    <header class="portal-header"><a class="brand" href="./portal-aluno.html"><span class="brand-mark">RL</span><span><strong>REAL LÍDER</strong><small>Portal do aluno</small></span></a><div class="topbar-actions"><div class="user-chip"><span class="avatar" data-user-initials>RL</span><span><strong data-user-name>Aluno</strong><small>Aluno</small></span></div><button class="button button-outline" type="button" data-logout>Sair</button></div></header>
+    <main class="portal-content">
+      <section class="portal-welcome"><p class="eyebrow">Área do aluno</p><h1>Olá, <span data-first-name>aluno</span>!</h1><p>Acompanhe seus próximos passos na Autoescola Líder.</p></section>
+      <section class="stat-grid compact-stats"><article class="stat-card"><span>Categoria</span><strong>B</strong><small>Plano demonstrativo</small></article><article class="stat-card"><span>Progresso</span><strong>Em andamento</strong><small>Consulte a recepção para detalhes</small></article></section>
+      <section class="panel"><div class="section-heading"><div><h2>Próximas aulas</h2><p>Seus agendamentos demonstrativos</p></div></div><div class="table-wrap"><table><thead><tr><th>Data e hora</th><th>Instrutor</th><th>Tipo de aula</th><th>Situação</th></tr></thead><tbody id="student-appointments"></tbody></table></div></section>
+      <p class="demo-disclaimer">As informações exibidas são de demonstração e não representam uma matrícula real.</p>
+    </main>
+  </div>
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>

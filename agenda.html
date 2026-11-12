@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101d32">
+  <title>Agendamentos | REAL LÍDER</title>
+  <link rel="icon" type="image/png" href="./assets/favicon.png">
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body data-page="schedule">
+  <div class="app-layout">
+    <aside class="sidebar">
+      <a class="brand brand-light" href="./dashboard.html"><span class="brand-mark">RL</span><span><strong>REAL LÍDER</strong><small>Gestão para autoescolas</small></span></a>
+      <p class="nav-caption">Administração</p>
+      <nav class="side-nav" aria-label="Navegação principal">
+        <a href="./dashboard.html">Visão geral</a><a href="./alunos.html">Alunos</a><a class="active" href="./agenda.html">Agendamentos</a><a href="./financeiro.html" data-admin-only>Financeiro</a><a href="./relatorios.html" data-admin-only>Relatórios</a><a href="./equipe.html" data-admin-only>Equipe e recursos</a>
+      </nav>
+      <div class="sidebar-footer"><strong>Autoescola Líder</strong><span>São João del-Rei · MG</span><button class="sidebar-logout" type="button" data-logout>Sair da conta</button></div>
+    </aside>
+    <main class="main-panel">
+      <header class="topbar"><div><p class="eyebrow">Aulas e horários</p><h1>Agendamentos</h1></div><div class="topbar-actions"><button class="button button-outline" type="button" data-theme-toggle>Alternar tema</button><div class="user-chip"><span class="avatar" data-user-initials>RL</span><span><strong data-user-name>Usuário</strong><small data-user-role>Equipe</small></span></div></div></header>
+      <div class="page-content">
+        <section class="page-intro"><div><h2>Agenda de aulas</h2><p>Organize aulas práticas, instrutores e horários em um só lugar.</p></div><button class="button button-primary" type="button" data-open-dialog="appointment-dialog">Novo agendamento <span aria-hidden="true">+</span></button></section>
+        <section class="stat-grid compact-stats"><article class="stat-card"><span>Aulas cadastradas</span><strong id="schedule-count">0</strong><small>Todos os agendamentos</small></article><article class="stat-card"><span>Próxima aula</span><strong id="schedule-next">—</strong><small>Horário mais próximo</small></article></section>
+        <section class="panel">
+          <div class="section-heading"><div><h2>Lista de aulas</h2><p>Os dados são salvos neste navegador.</p></div><label class="filter-field"><span>Filtrar por data</span><input id="schedule-filter" type="date"></label></div>
+          <div class="table-wrap"><table><thead><tr><th>Data e hora</th><th>Aluno</th><th>Instrutor</th><th>Aula</th><th>Situação</th><th><span class="sr-only">Ações</span></th></tr></thead><tbody id="schedule-table"></tbody></table></div>
+          <p id="schedule-empty" class="empty-state" hidden>Nenhum agendamento encontrado.</p>
+        </section>
+      </div>
+    </main>
+  </div>
+  <dialog class="form-dialog" id="appointment-dialog">
+    <form id="appointment-form" method="dialog">
+      <div class="dialog-heading"><div><p class="eyebrow">Agenda</p><h2 id="appointment-dialog-title">Novo agendamento</h2></div><button class="icon-button" type="button" data-close-dialog aria-label="Fechar">×</button></div>
+      <input type="hidden" name="id">
+      <div class="form-row"><label class="field"><span>Aluno</span><input name="student" list="student-options" required></label><label class="field"><span>Data</span><input name="date" type="date" required></label></div>
+      <datalist id="student-options"></datalist>
+      <div class="form-row"><label class="field"><span>Horário</span><input name="time" type="time" required></label><label class="field"><span>Instrutor</span><input name="instructor" required></label></div>
+      <div class="form-row"><label class="field"><span>Tipo de aula</span><select name="type"><option>Aula prática · A</option><option>Aula prática · B</option><option>Simulador</option><option>Aula teórica</option></select></label><label class="field"><span>Situação</span><select name="status"><option>Confirmada</option><option>Aguardando</option><option>Realizada</option><option>Cancelada</option></select></label></div>
+      <div class="dialog-actions"><button class="button button-outline" type="button" data-close-dialog>Cancelar</button><button class="button button-primary" type="submit">Salvar agendamento</button></div>
+    </form>
+  </dialog>
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>

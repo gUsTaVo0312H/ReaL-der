@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101d32">
+  <meta name="description" content="Acesse o sistema de gestão da Autoescola Real Líder.">
+  <title>Entrar | REAL LÍDER</title>
+  <link rel="icon" type="image/png" href="./assets/favicon.png">
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body class="login-page" data-page="login">
+  <main class="login-layout">
+    <section class="login-intro" aria-labelledby="intro-title">
+      <a class="brand brand-light" href="./index.html" aria-label="REAL LÍDER - início">
+        <span class="brand-mark" aria-hidden="true">RL</span>
+        <span><strong>REAL LÍDER</strong><small>Gestão para autoescolas</small></span>
+      </a>
+      <div class="intro-copy">
+        <p class="eyebrow">Uma nova forma de gerir</p>
+        <h1 id="intro-title">Tudo o que move a autoescola, em um só lugar.</h1>
+        <p>Mais organização para a equipe, mais clareza para os alunos e decisões melhores todos os dias.</p>
+        <ul class="intro-highlights">
+          <li>Alunos e matrículas</li>
+          <li>Agenda de aulas</li>
+          <li>Controle financeiro</li>
+        </ul>
+      </div>
+      <p class="intro-footer">REAL LÍDER · São João del-Rei, MG</p>
+    </section>
+
+    <section class="login-form-wrap" aria-labelledby="login-title">
+      <div class="login-form-content">
+        <a class="brand login-brand" href="./index.html">
+          <span class="brand-mark" aria-hidden="true">RL</span>
+          <span><strong>REAL LÍDER</strong><small>Gestão para autoescolas</small></span>
+        </a>
+        <div id="login-step">
+          <p class="eyebrow">Bem-vindo de volta</p>
+          <h2 id="login-title">Acesse sua conta</h2>
+          <p class="muted">Informe seus dados para entrar na plataforma.</p>
+
+          <form id="login-form" class="form-stack">
+            <label class="field">
+              <span>CPF</span>
+              <input id="login-cpf" name="cpf" inputmode="numeric" autocomplete="username" placeholder="000.000.000-00" maxlength="14" required>
+            </label>
+            <label class="field">
+              <span>Senha</span>
+              <input id="login-password" name="password" type="password" autocomplete="current-password" placeholder="Digite sua senha" required>
+            </label>
+            <div class="login-form-links">
+              <button class="text-link" type="button" data-open-recovery>Esqueci minha senha</button>
+            </div>
+            <p id="login-error" class="form-error" role="alert" hidden></p>
+            <button class="button button-primary button-wide" type="submit">Entrar na plataforma <span aria-hidden="true">→</span></button>
+          </form>
+
+          <aside class="demo-box" aria-label="Contas de demonstração">
+            <h3>Contas de demonstração</h3>
+            <dl class="demo-accounts">
+              <div><dt>Administrador</dt><dd>000.000.000-00</dd></div>
+              <div><dt>Recepção</dt><dd>111.111.111-11</dd></div>
+              <div><dt>Instrutor</dt><dd>222.222.222-22</dd></div>
+              <div><dt>Aluno</dt><dd>333.333.333-33</dd></div>
+            </dl>
+            <p>Senha para todas as contas: <strong>Demo@123</strong></p>
+          </aside>
+          <p class="login-note">Demonstração front-end. Não informe dados pessoais reais.</p>
+        </div>
+
+        <section id="mfa-step" aria-labelledby="mfa-title" hidden>
+          <p class="eyebrow">Verificação em duas etapas</p>
+          <h2 id="mfa-title">Confirme sua identidade</h2>
+          <p id="mfa-description" class="muted"></p>
+          <form id="mfa-form" class="form-stack">
+            <label class="field">
+              <span>Código de segurança</span>
+              <input id="mfa-code" name="code" inputmode="numeric" autocomplete="one-time-code" placeholder="000000" maxlength="6" required>
+            </label>
+            <p id="mfa-error" class="form-error" role="alert" hidden></p>
+            <button class="button button-primary button-wide" type="submit">Verificar e continuar <span aria-hidden="true">→</span></button>
+          </form>
+          <button id="mfa-back" class="text-link mfa-back" type="button">Voltar ao login</button>
+          <p class="demo-disclaimer">Para esta demonstração, qualquer sequência de 6 dígitos é aceita.</p>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <dialog class="form-dialog recovery-dialog" id="recovery-dialog">
+    <div class="dialog-heading"><div><p class="eyebrow">Recuperação demonstrativa</p><h2>Esqueceu sua senha?</h2></div><button class="icon-button" type="button" data-close-recovery aria-label="Fechar">×</button></div>
+    <p class="muted">Em um produto real, as instruções seriam enviadas ao contato cadastrado. Nenhuma mensagem será enviada neste protótipo.</p>
+    <button class="button button-primary button-wide" type="button" data-close-recovery>Entendi</button>
+  </dialog>
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>
